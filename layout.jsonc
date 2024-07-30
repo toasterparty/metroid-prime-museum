@@ -102,6 +102,12 @@
                         1114217
                     ]
                 },
+                "Connection Elevator to Deck Beta (2)": {
+                    "deleteIds": [
+                        1114216,
+                        1114217
+                    ]
+                },
                 "Subventilation Shaft Section A": {
                     "deleteIds": [
                         1179674,
@@ -109,6 +115,27 @@
                     ]
                 },
                 "Main Ventilation Shaft Section B": {
+                    "timers": [
+                        {
+                            "id": 10000001,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000001,
+                            "state": "ZERO",
+                            "targetId": 1245199,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000001,
+                            "state": "ZERO",
+                            "targetId": 1245197,
+                            "message": "SET_TO_MAX"
+                        }
+                    ],
                     "deleteIds": [
                         1245231,
                         1245265,
@@ -139,10 +166,124 @@
                     ]
                 },
                 "Reactor Core": {
+                    "extraScans": [
+                        {
+                            "id": 10000000,
+                            "actorId": 10000003,
+                            "position": [151.066, -318.1474, -97.0315],
+                            "rotation": 150.4,
+                            "text": "Reactor destruction sequence initiated",
+                            "combatVisible": true,
+                            "isRed": true
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000004,
+                            "time": 0.02
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 10000002,
+                            "position": [
+                                185.4799,
+                                -292.2008,
+                                -82.1232
+                            ],
+                            "scale": [
+                                20,
+                                3,
+                                20
+                            ],
+                            "deactivateOnEnter": true
+                        }
+                    ],
                     "deleteIds": [
                         1638404,
                         1638657,
-                        1638686
+                        1638686,
+                        1638483 // cutscene trigger
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000002,
+                            "state": "ENTERED",
+                            "targetId": 1638409, // platform
+                            "message": "START"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000003,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 10000004,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000004,
+                            "state": "ZERO",
+                            "targetId": 10000000,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000003,
+                            "state": "ZERO",
+                            "targetId": 10000000,
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638672, // door block shield
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638560, // Relay - Activate Teleport Trigger In Hangar
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638411, // DOCK
+                            "message": "SET_TO_MAX"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638687, // layer change
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638689, // layer change
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638688, // layer change
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638694, // layer change
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638709, // layer change
+                            "message": "DECREMENT"
+                        }
                     ]
                 },
                 "Cargo Freight Lift to Deck Gamma": {
