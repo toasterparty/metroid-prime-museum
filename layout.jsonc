@@ -22,7 +22,7 @@
         "etankCapacity": 10000000,
         "springBall": true,
         // TODO: debug
-        "startingRoom": "Tallon Overworld:Artifact Temple",
+        "startingRoom": "Impact Crater:Crater Tunnel B",
         "artifactTempleLayerOverrides": {
             "Artifact of Chozo": false,
             "Artifact of Elder": false,
@@ -2055,6 +2055,9 @@
             }
         },
         "Impact Crater": {
+            "transports": {
+                "Essence Dead Cutscene": "End Cinema:End Cinema"
+            },
             "rooms": {
                 "Crater Tunnel A": {
                     "deleteIds": [
@@ -2076,22 +2079,90 @@
                     ]
                 },
                 "Phazon Infusion Chamber": {
+                    "layers": {
+                        "1": false
+                    },
                     "deleteIds": [
                         327832,
                         327900
                     ]
                 },
+                "Subchamber One": {
+                    "layers": {
+                        "1": false
+                    }
+                },
+                "Subchamber Two": {
+                    "layers": {
+                        "1": false
+                    }
+                },
+                "Subchamber Three": {
+                    "layers": {
+                        "1": false
+                    }
+                },
+                "Subchamber Four": {
+                    "layers": {
+                        "1": false
+                    }
+                },
                 "Subchamber Five": {
+                    "layers": {
+                        "1": true
+                    },
                     "deleteIds": [
                         655405
                     ]
                 },
                 "Metroid Prime Lair": {
+                    "layers": {
+                        "1": false
+                    },
                     "deleteIds": [
                         720917,
                         720918,
                         721310,
                         721367
+                    ]
+                }
+            }
+        },
+        "End Cinema": {
+            "rooms": {
+                "End Cinema": {
+                    "triggers": [
+                        {
+                            "id": 1103,
+                            "active": false,
+                            "scale": [
+                                80,
+                                80,
+                                80
+                            ]
+                        }
+                    ],
+                    "pickups": [
+                        {
+                            "id": 10000826,
+                            "type": "Nothing",
+                            "position": [
+                                1.74,
+                                -52.2064,
+                                -6.5828
+                            ],
+                            "scanText": "Credits",
+                            "hudmemoText": " ",
+                            "respawn": true
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000826,
+                            "state": "ARRIVED",
+                            "targetId": 1103,
+                            "message": "ACTIVATE"
+                        }
                     ]
                 }
             }
