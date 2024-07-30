@@ -50,7 +50,8 @@
         "qolCutscenes": "SkippableCompetitive",
         "qolGameBreaking": true,
         "qolCosmetic": true,
-        "qolGeneral": true
+        "qolGeneral": true,
+        "noHud": true
     },
     "levelData": {
         "Frigate Orpheon": {
@@ -1248,7 +1249,7 @@
                         }
                     ],
                     "deleteIds": [
-                        // ridley  stuff
+                        // ridley stuff
                         1049977,
                         1048614,
                         1048833,
