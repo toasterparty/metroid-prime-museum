@@ -22,7 +22,7 @@
         "etankCapacity": 10000000,
         "springBall": true,
         // TODO: debug
-        "startingRoom": "Chozo Ruins:Burn Dome",
+        "startingRoom": "Phendrana Drifts:Chapel of the Elders",
         "artifactTempleLayerOverrides": {
             "Artifact of Chozo": false,
             "Artifact of Elder": false,
@@ -644,7 +644,7 @@
                         {
                             "senderId": 2435310, // varia suit
                             "state": "ARRIVED",
-                            "targetId": 10000009, 
+                            "targetId": 10000009,
                             "message": "DECREMENT"
                         },
                         {
@@ -796,7 +796,7 @@
                         {
                             "senderId": 3155850, // bombs
                             "state": "ARRIVED",
-                            "targetId": 10000010, 
+                            "targetId": 10000010,
                             "message": "DECREMENT"
                         }
                     ],
@@ -1002,7 +1002,18 @@
                         917562,
                         917568,
                         917664,
-                        918008
+                        918008,
+                        917542,
+                        917655,
+                        917644,
+                        917647,
+                        917601,
+                        917641,
+                        917545,
+                        917554,
+                        917563,
+                        917569,
+                        917609
                     ]
                 },
                 "Ruined Courtyard": {
