@@ -22,7 +22,7 @@
         "etankCapacity": 10000000,
         "springBall": true,
         // TODO: debug
-        "startingRoom": "Chozo Ruins:Hall of the Elders",
+        "startingRoom": "Chozo Ruins:Burn Dome",
         "artifactTempleLayerOverrides": {
             "Artifact of Chozo": false,
             "Artifact of Elder": false,
@@ -526,7 +526,8 @@
                         1900863,
                         1900864,
                         1900865,
-                        1900961
+                        1900961,
+                        1900891 // layer change trigger
                     ]
                 },
                 "Transport Access North": {
@@ -602,6 +603,87 @@
                     ]
                 },
                 "Sunchamber": {
+                    "layers": {
+                        "1": false,
+                        "2": false,
+                        "3": true,
+                        "6": true
+                    },
+                    "timers": [
+                        {
+                            "id": 10000007,
+                            "layer": 10,
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 10000008,
+                            "time": 0.02,
+                            "startImmediately": true
+                        },
+                        {
+                            "id": 2434922, // change to clean water
+                            "time": 0.5
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000009,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 4066558442,
+                            "layerChangeLayerId": 10
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000007,
+                            "state": "ZERO",
+                            "targetId": 2435310, // varia suit
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2435310, // varia suit
+                            "state": "ARRIVED",
+                            "targetId": 10000009, 
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 10000008,
+                            "state": "ZERO",
+                            "targetId": 2436989, // Artifact
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000008,
+                            "state": "ZERO",
+                            "targetId": 2424851, // Platform step
+                            "message": "START"
+                        },
+                        {
+                            "senderId": 2435310, // varia suit
+                            "state": "ARRIVED",
+                            "targetId": 2437299, // Relay_FLAAGHRA DEAD LAYERSWITCH
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 2435310, // varia suit
+                            "state": "ARRIVED",
+                            "targetId": 2437271, // Memory Relay_Swap Water
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 2435310, // varia suit
+                            "state": "ARRIVED",
+                            "targetId": 2434922, // Timer--change to clean water
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 2435310, // varia suit
+                            "state": "ARRIVED",
+                            "targetId": 2437271, // Memory Relay_Swap Water
+                            "message": "ACTIVATE"
+                        }
+                    ],
                     "deleteIds": [
                         2424862,
                         2424882,
