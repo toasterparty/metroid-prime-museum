@@ -22,7 +22,7 @@
         "etankCapacity": 10000000,
         "springBall": true,
         // TODO: debug
-        "startingRoom": "Chozo Ruins:Burn Dome",
+        "startingRoom": "Chozo Ruins:Ruined Shrine",
         "artifactTempleLayerOverrides": {
             "Artifact of Chozo": false,
             "Artifact of Elder": false,
@@ -400,7 +400,9 @@
                         600167,
                         600168,
                         600507,
-                        600322
+                        600322,
+                        600081,
+                        590101
                     ]
                 },
                 "Eyon Tunnel": {
