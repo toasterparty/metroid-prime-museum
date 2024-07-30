@@ -22,7 +22,7 @@
         "etankCapacity": 10000000,
         "springBall": true,
         // TODO: debug
-        "startingRoom": "Chozo Ruins:Ruined Shrine",
+        "startingRoom": "Chozo Ruins:Hall of the Elders",
         "artifactTempleLayerOverrides": {
             "Artifact of Chozo": false,
             "Artifact of Elder": false,
@@ -731,16 +731,36 @@
                     ]
                 },
                 "Hall of the Elders": {
+                    "layers": {
+                        "1": true,
+                        "2": false
+                    },
+                    "timers": [
+                        {
+                            "id": 10000006,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "addConnections": [
+                        // Hands start active
+                        {
+                            "senderId": 10000006,
+                            "state": "ZERO",
+                            "targetId": 3408466, // Relay - turn on boling hands after defeating ghosts
+                            "message": "SET_TO_ZERO"
+                        },
+                        // Disable ghost ambience
+                        {
+                            "senderId": 10000006,
+                            "state": "ZERO",
+                            "targetId": 3408750,
+                            "message": "ACTIVATE"
+                        }
+                    ],
                     "deleteIds": [
-                        3408170,
-                        3408173,
-                        3408176,
-                        3408179,
-                        3408566,
-                        3408371,
-                        3408379,
-                        3408387,
-                        3407887
+                        3408130,
+                        3408399
                     ]
                 },
                 "Elder Hall Access": {
