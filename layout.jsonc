@@ -15,13 +15,28 @@
         "phazonDamagePerSec": 0.0000001,
         "poisonDamagePerSec": 0.0000001,
         "removeHiveMecha": true,
-        "skipRidley": true,
         "removeVanillaBlastShields": true,
         "missileStationPbRefill": true,
         "autoEnabledElevators": true,
         "difficultyBehavior": "NormalOnly",
         "etankCapacity": 10000000,
-        "springBall": true
+        "springBall": true,
+        // TODO: debug
+        "startingRoom": "Tallon Overworld:Artifact Temple",
+        "artifactTempleLayerOverrides": {
+            "Artifact of Chozo": false,
+            "Artifact of Elder": false,
+            "Artifact of Lifegiver": false,
+            "Artifact of Nature": false,
+            "Artifact of Newborn": false,
+            "Artifact of Spirit": false,
+            "Artifact of Strength": false,
+            "Artifact of Sun": false,
+            "Artifact of Truth": false,
+            "Artifact of Warrior": false,
+            "Artifact of Wild": false,
+            "Artifact of World": false
+        }
     },
     "preferences": {
         "artifactHintBehavior": "Default",
@@ -170,7 +185,11 @@
                         {
                             "id": 10000000,
                             "actorId": 10000003,
-                            "position": [151.066, -318.1474, -97.0315],
+                            "position": [
+                                151.066,
+                                -318.1474,
+                                -97.0315
+                            ],
                             "rotation": 150.4,
                             "text": "Reactor destruction sequence initiated",
                             "combatVisible": true,
@@ -1192,6 +1211,54 @@
         },
         "Tallon Overworld": {
             "rooms": {
+                "Artifact Temple": {
+                    "editObjs": {
+                        "1048578": { // default spawn
+                            "position": [
+                                -374,
+                                78.3,
+                                -38.9
+                            ]
+                        }
+                    },
+                    "addConnections": [
+                        {
+                            "senderId": 1049090, // Camera Intro 1
+                            "state": "INACTIVE",
+                            "targetId": 1049088, // cinema bars
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 1049090, // Camera Intro 1
+                            "state": "INACTIVE",
+                            "targetId": 1049298, // Memory Relay - Activate Teleporter
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1049090, // Camera Intro 1
+                            "state": "INACTIVE",
+                            "targetId": 1049921, // Relay- End  of Cinema
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 1049298, // Memory Relay - Activate Teleporter
+                            "state": "ACTIVE",
+                            "targetId": 1049356, // Memory Relay Artifact 1 Picked up
+                            "message": "DEACTIVATE"
+                        }
+                    ],
+                    "deleteIds": [
+                        // ridley  stuff
+                        1049977,
+                        1048614,
+                        1048833,
+                        1049731,
+                        1049095,
+                        1049765,
+                        1049866,
+                        1049231
+                    ]
+                },
                 "Landing Site": {
                     "deleteIds": [
                         638,
