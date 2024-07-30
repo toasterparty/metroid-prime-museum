@@ -22,7 +22,7 @@
         "etankCapacity": 10000000,
         "springBall": true,
         // TODO: debug
-        "startingRoom": "Impact Crater:Crater Tunnel B",
+        "startingRoom": "Chozo Ruins:Burn Dome",
         "artifactTempleLayerOverrides": {
             "Artifact of Chozo": false,
             "Artifact of Elder": false,
@@ -686,10 +686,26 @@
                     ]
                 },
                 "Burn Dome": {
+                    "timers": [
+                        {
+                            "id": 10000005,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000005,
+                            "state": "ZERO",
+                            "targetId": 3155850,
+                            "message": "ACTIVATE"
+                        }
+                    ],
                     "deleteIds": [
                         3145960,
                         3145742,
-                        3155744
+                        3155744,
+                        3145758
                     ]
                 },
                 "Furnace": {
