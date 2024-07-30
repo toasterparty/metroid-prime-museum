@@ -691,16 +691,31 @@
                     "timers": [
                         {
                             "id": 10000005,
+                            "layer": 10,
                             "time": 0.02,
                             "startImmediately": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000010,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3847848524,
+                            "layerChangeLayerId": 10
                         }
                     ],
                     "addConnections": [
                         {
                             "senderId": 10000005,
                             "state": "ZERO",
-                            "targetId": 3155850,
+                            "targetId": 3155850, // bombs
                             "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3155850, // bombs
+                            "state": "ARRIVED",
+                            "targetId": 10000010, 
+                            "message": "DECREMENT"
                         }
                     ],
                     "deleteIds": [
