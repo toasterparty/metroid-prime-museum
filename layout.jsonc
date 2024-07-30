@@ -1,0 +1,40 @@
+{
+    "$schema": "https://randovania.github.io/randomprime/randomprime.schema.json",
+    "outputIso": "Metroid Prime Museum v0.1",
+    "tweaks": {
+        
+    },
+    "forceVanillaLayout": true,
+    "gameConfig": {
+        "gameBanner": {
+            "gameName": "Metroid Prime Museum v0.1",
+            "gameNameFull": "Metroid Prime Museum v0.1",
+            "description": "romhack by toasterparty"
+        },
+        "mainMenuMessage": "Metroid Prime Museum v0.1",
+        "resultsString": "Metroid Prime Museum v0.1",
+        "heatDamagePerSec": 0.0000001,
+        "phazonDamagePerSec": 0.0000001,
+        "poisonDamagePerSec": 0.0000001,
+        "removeHiveMecha": true,
+        "skipRidley": true,
+        "removeVanillaBlastShields": true,
+        "missileStationPbRefill": true,
+        "autoEnabledElevators": true,
+        "difficultyBehavior": "NormalOnly",
+        "etankCapacity": 10000000,
+        "springBall": true
+    },
+    "preferences": {
+        "artifactHintBehavior": "Default",
+        "automaticCrashScreen": true,
+        "defaultGameOptions": {
+            "helmetOpacity": 0,
+            "visorOpacity": 0,
+            "hudLag": false
+        },
+        "mapDefaultState": "Always",
+        "qolCutscenes": "Major",
+        "qolGameBreaking": true
+    }
+}
