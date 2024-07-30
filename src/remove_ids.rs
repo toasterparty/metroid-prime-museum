@@ -2,10 +2,11 @@
 
 let mut remove: Vec<u32> = Vec::new();
 
+
 for obj in scly_layer.objects.iter() {
     if let Some(actor) = obj.property_data.as_actor() {
         if actor.cmdl == 0x5391EDB6 || actor.cmdl == 0x6E5D6796 {
-            remove.push(obj.instance_id);
+            remove.push(obj.instance_id & 0x00FFFFFF);
         }
         continue;
     }
@@ -33,7 +34,7 @@ for obj in scly_layer.objects.iter() {
             "rui_hivetotem",
         ] {
             if name.contains(&skip_name.to_lowercase()) {
-                remove.push(obj.instance_id);
+                remove.push(obj.instance_id & 0x00FFFFFF);
                 break;
             }
         }
@@ -82,7 +83,7 @@ for obj in scly_layer.objects.iter() {
         0x7F,
         0x86,
     ].contains(&obj.property_data.object_type()) {
-        remove.push(obj.instance_id);
+        remove.push(obj.instance_id & 0x00FFFFFF);
     }
 }
 
