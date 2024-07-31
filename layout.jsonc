@@ -20,24 +20,7 @@
         "autoEnabledElevators": true,
         "difficultyBehavior": "NormalOnly",
         "etankCapacity": 10000000,
-        "springBall": true,
-        // TODO: debug
-        "startingRoom": "Chozo Ruins:Training Chamber",
-        "phazonEliteWithoutDynamo": true,
-        "artifactTempleLayerOverrides": {
-            "Artifact of Chozo": false,
-            "Artifact of Elder": false,
-            "Artifact of Lifegiver": false,
-            "Artifact of Nature": false,
-            "Artifact of Newborn": false,
-            "Artifact of Spirit": false,
-            "Artifact of Strength": false,
-            "Artifact of Sun": false,
-            "Artifact of Truth": false,
-            "Artifact of Warrior": false,
-            "Artifact of Wild": false,
-            "Artifact of World": false
-        }
+        "springBall": true
     },
     "preferences": {
         "artifactHintBehavior": "Default",
