@@ -22,7 +22,7 @@
         "etankCapacity": 10000000,
         "springBall": true,
         // TODO: debug
-        "startingRoom": "Phazon Mines:Elite Research",
+        "startingRoom": "Phazon Mines:Elite Quarters",
         "phazonEliteWithoutDynamo": true,
         "artifactTempleLayerOverrides": {
             "Artifact of Chozo": false,
@@ -2000,11 +2000,40 @@
                     ]
                 },
                 "Elite Quarters": {
+                    "timers": [
+                        {
+                            "id": 10000013,
+                            "layer": 10,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000014,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3995007398,
+                            "layerChangeLayerId": 10
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000013,
+                            "state": "ZERO",
+                            "targetId": 1705144, // psuit
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1705144, // psuit
+                            "state": "ARRIVED",
+                            "targetId": 10000010,
+                            "message": "DECREMENT"
+                        }
+                    ],
                     "deleteIds": [
                         1704745,
                         1704753,
                         1705067,
-                        1704230,
                         1704563,
                         1704564,
                         1704702,
@@ -2012,7 +2041,9 @@
                         1705059,
                         1705060,
                         1705061,
-                        1705062
+                        1705062,
+                        1704921,
+                        1704624
                     ]
                 },
                 "Central Dynamo": {
