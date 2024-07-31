@@ -22,7 +22,7 @@
         "etankCapacity": 10000000,
         "springBall": true,
         // TODO: debug
-        "startingRoom": "Phendrana Drifts:Research Lab Aether",
+        "startingRoom": "Phendrana Drifts:Quarantine Cave",
         "artifactTempleLayerOverrides": {
             "Artifact of Chozo": false,
             "Artifact of Elder": false,
@@ -1094,13 +1094,54 @@
                     ]
                 },
                 "Quarantine Cave": {
+                    "timers": [
+                        {
+                            "id": 10000005,
+                            "layer": 10,
+                            "time": 0.02,
+                            "startImmediately": true
+                        }
+                    ],
+                    "specialFunctions": [
+                        {
+                            "id": 10000010,
+                            "type": "ScriptLayerController",
+                            "layerChangeRoomId": 3679267584,
+                            "layerChangeLayerId": 10
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000005,
+                            "state": "ZERO",
+                            "targetId": 1573322, // spider ball
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000005,
+                            "state": "ZERO",
+                            "targetId": 1573394, // platform dead thardus
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 1573322, // spider ball
+                            "state": "ARRIVED",
+                            "targetId": 10000010,
+                            "message": "DECREMENT"
+                        }
+                    ],
                     "deleteIds": [
                         1573259,
                         1572979,
                         1572873,
                         1573574,
                         1573761,
-                        1573770
+                        1573770,
+                        1572980,
+                        1573713,
+                        1573712,
+                        1573707,
+                        1573714
                     ]
                 },
                 "Research Lab Hydra": {
