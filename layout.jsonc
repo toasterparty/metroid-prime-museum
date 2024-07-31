@@ -22,7 +22,7 @@
         "etankCapacity": 10000000,
         "springBall": true,
         // TODO: debug
-        "startingRoom": "Phendrana Drifts:Chapel of the Elders",
+        "startingRoom": "Phendrana Drifts:Research Lab Aether",
         "artifactTempleLayerOverrides": {
             "Artifact of Chozo": false,
             "Artifact of Elder": false,
@@ -1076,7 +1076,9 @@
                         1311095,
                         1311100,
                         1311308,
-                        1311619
+                        1311619,
+                        1311177,
+                        1311461
                     ]
                 },
                 "North Quarantine Tunnel": {
@@ -1228,7 +1230,8 @@
                         2556396,
                         2557601,
                         2557602,
-                        2556598
+                        2556598,
+                        2557293
                     ]
                 },
                 "Research Core": {
@@ -1309,6 +1312,21 @@
                     ]
                 },
                 "Research Lab Aether": {
+                    "timers": [
+                        {
+                            "id": 10000011,
+                            "startImmediately": true,
+                            "time": 0.5
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000011,
+                            "state": "ZERO",
+                            "targetId": 3342429,
+                            "message": "RESET_AND_START"
+                        }
+                    ],
                     "deleteIds": [
                         3342392,
                         3343185,
