@@ -22,7 +22,7 @@
         "etankCapacity": 10000000,
         "springBall": true,
         // TODO: debug
-        "startingRoom": "Phendrana Drifts:Phendrana Shorelines",
+        "startingRoom": "Tallon Overworld:Life Grove",
         "artifactTempleLayerOverrides": {
             "Artifact of Chozo": false,
             "Artifact of Elder": false,
@@ -1705,6 +1705,11 @@
                     ]
                 },
                 "Life Grove": {
+                    "pickups": [
+                        {
+                            "type": "X-Ray Visor"
+                        }
+                    ],
                     "deleteIds": [
                         2753194,
                         2752706,
@@ -1718,7 +1723,10 @@
                         2753113,
                         2753114,
                         2753115,
-                        2753116
+                        2753116,
+                        2752574,
+                        2753267,
+                        2752951
                     ]
                 }
             }
