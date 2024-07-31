@@ -22,7 +22,8 @@
         "etankCapacity": 10000000,
         "springBall": true,
         // TODO: debug
-        "startingRoom": "Phazon Mines:Ventilation Shaft",
+        "startingRoom": "Phazon Mines:Elite Research",
+        "phazonEliteWithoutDynamo": true,
         "artifactTempleLayerOverrides": {
             "Artifact of Chozo": false,
             "Artifact of Elder": false,
@@ -1817,6 +1818,28 @@
                     ]
                 },
                 "Elite Research": {
+                    "addConnections": [
+                        {
+                            "senderId": 852393, // timer break tank
+                            "state": "ZERO",
+                            "targetId": 853010, // timer spawn artifact
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 852214, // tank
+                            "state": "DEAD",
+                            "targetId": 853198, // timer start cine
+                            "message": "RESET_AND_START"
+                        }
+                    ],
+                    "removeConnections": [
+                        {
+                            "senderId": 852214, // [Platform] Platform_holding Tank
+                            "targetId": 852471, // [PointOfInterest] POI_03_Mines panel 1.scan
+                            "state": "DEAD",
+                            "message": "DEACTIVATE"
+                        }
+                    ],
                     "deleteIds": [
                         852311,
                         852313,
@@ -1842,7 +1865,10 @@
                         852754,
                         852755,
                         852756,
-                        853114
+                        853114,
+                        851973,
+                        851977,
+                        853019
                     ]
                 },
                 "Elite Control Access": {
