@@ -1,7 +1,6 @@
 {
     "$schema": "https://randovania.github.io/randomprime/randomprime.schema.json",
-    "outputIso": "Metroid Prime Museum v0.1",
-    "tweaks": {},
+    "outputIso": "Metroid Prime Museum v0.1.iso",
     "forceVanillaLayout": true,
     "gameConfig": {
         "gameBanner": {
@@ -20,7 +19,8 @@
         "autoEnabledElevators": true,
         "difficultyBehavior": "NormalOnly",
         "etankCapacity": 10000000,
-        "springBall": true
+        "springBall": true,
+        "disableItemLoss": true
     },
     "preferences": {
         "artifactHintBehavior": "Default",
@@ -1453,6 +1453,62 @@
                     ]
                 },
                 "Landing Site": {
+                    "specialFunctions": [
+                        {
+                            "id": 10000015,
+                            "type": "InventoryActivator",
+                            "itemId": "PhazonSuit"
+                        }
+                    ],
+                    "timers": [
+                        {
+                            "id": 10000016,
+                            "time": 0.1
+                        }
+                    ],
+                    "removeConnections": [
+                        {
+                            "senderId": 221,
+                            "state": "ENTERED",
+                            "targetId": 369,
+                            "message": "RESET"
+                        }
+                    ],
+                    "addConnections": [
+                        // always reposition
+                        {
+                            "senderId": 221,
+                            "state": "ENTERED",
+                            "targetId": 369,
+                            "message": "SET_TO_ZERO"
+                        },
+                        // start a timer to wipe inventory
+                        {
+                            "senderId": 221,
+                            "state": "ENTERED",
+                            "targetId": 10000016,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000016,
+                            "state": "ZERO",
+                            "targetId": 369,
+                            "message": "RESET"
+                        },
+                        // cancel the timer if have phazon suit
+                        {
+                            "senderId": 221,
+                            "state": "ENTERED",
+                            "targetId": 10000015,
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 10000015,
+                            "state": "ZERO",
+                            "targetId": 10000016,
+                            "message": "DEACTIVATE"
+                        }
+                    ],
                     "deleteIds": [
                         638,
                         639
