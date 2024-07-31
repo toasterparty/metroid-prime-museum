@@ -22,7 +22,7 @@
         "etankCapacity": 10000000,
         "springBall": true,
         // TODO: debug
-        "startingRoom": "Phazon Mines:Elite Quarters",
+        "startingRoom": "Chozo Ruins:Training Chamber",
         "phazonEliteWithoutDynamo": true,
         "artifactTempleLayerOverrides": {
             "Artifact of Chozo": false,
@@ -416,7 +416,11 @@
                     ]
                 },
                 "Training Chamber": {
+                    "layers": {
+                        "1": false
+                    },
                     "deleteIds": [
+                        786822,
                         786846,
                         786851,
                         787008,
