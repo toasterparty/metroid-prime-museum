@@ -2237,6 +2237,32 @@
                     ]
                 },
                 "Elite Control": {
+                    "addConnections": [
+                        {
+                            "senderId": 1050391, // load trigger
+                            "state": "ENTERED",
+                            "targetId": 1050674, // layer change
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 1050391, // load trigger
+                            "state": "ENTERED",
+                            "targetId": 1050907, // layer change
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 1050391, // load trigger
+                            "state": "ENTERED",
+                            "targetId": 1051342, // relay - activate ice troopers
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 1051342, // relay - activate ice troopers
+                            "state": "ZERO",
+                            "targetId": 1050628, // Relay_SAM01
+                            "message": "SET_TO_ZERO"
+                        }
+                    ],
                     "deleteIds": [
                         1049400,
                         1050848,
@@ -2252,7 +2278,15 @@
                         1051034,
                         1051035,
                         1051036,
-                        1051379
+                        1051379,
+                        1050622,
+                        1051466,
+                        1048700,
+                        1048715,
+                        1050913,
+                        1051612,
+                        1050911,
+                        1050760
                     ]
                 },
                 "Ventilation Shaft": {
