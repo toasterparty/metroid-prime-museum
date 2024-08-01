@@ -200,22 +200,26 @@
                         {
                             "id": 10000004,
                             "time": 0.02
+                        },
+                        {
+                            "id": 10000018,
+                            "time": 0.02,
+                            "startImmediately": true
                         }
                     ],
                     "triggers": [
                         {
                             "id": 10000002,
                             "position": [
-                                185.4799,
-                                -292.2008,
-                                -82.1232
+                                185.47,
+                                -293.2,
+                                -91.32
                             ],
                             "scale": [
                                 20,
-                                3,
-                                20
-                            ],
-                            "deactivateOnEnter": true
+                                6,
+                                30
+                            ]
                         }
                     ],
                     "deleteIds": [
@@ -224,6 +228,12 @@
                         1638686,
                         1638483 // cutscene trigger
                     ],
+                    "waypoints": [
+                        {
+                            "id": 1638416, // top waypoint
+                            "speed": 5 // match bottom waypoint speed
+                        }
+                    ],
                     "addConnections": [
                         {
                             "senderId": 10000002,
@@ -231,6 +241,31 @@
                             "targetId": 1638409, // platform
                             "message": "START"
                         },
+                        {
+                            "senderId": 10000018,
+                            "state": "ZERO",
+                            "targetId": 1638415, // bottom waypoint
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000002,
+                            "state": "ENTERED",
+                            "targetId": 1638416, // top waypoint
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 10000002,
+                            "state": "ENTERED",
+                            "targetId": 1638415, // bottom waypoint
+                            "message": "TOGGLE_ACTIVE"
+                        },
+                        {
+                            "senderId": 1638415, // bottom waypoint
+                            "state": "ARRIVED",
+                            "targetId": 1638416, // top waypoint
+                            "message": "NEXT"
+                        },
+
                         {
                             "senderId": 10000000,
                             "state": "SCAN_DONE",
