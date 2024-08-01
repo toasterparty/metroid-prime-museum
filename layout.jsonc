@@ -302,6 +302,238 @@
                             "state": "SCAN_DONE",
                             "targetId": 1638709, // layer change
                             "message": "DECREMENT"
+                        },
+                        // reactor shutdown theatrics //
+                        // crystals
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638421,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638422,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638423,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638424,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638425,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638426,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638427,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638428,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638430,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638431,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638432,
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638442,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638401,
+                            "message": "DEACTIVATE"
+                        },
+                        // sounds
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638433,
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638524,
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638525,
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638526,
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638527,
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638528,
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638534,
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638418,
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638707,
+                            "message": "START"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638469,
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638478,
+                            "message": "RESET_AND_START"
+                        },
+                        // cutscene
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638669,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638467,
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638698,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638697,
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638705,
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638533,
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638468, // [Timer] AfterShake_Timer
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638476, // [Effect] PanelSparks
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638472, // [Effect] FallingSparks1
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638452, // [Effect] ElectricGoAround
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638470, // [Effect] Afterfire
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638482, // [Effect] Explosion3
+                            "message": "DELETED"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638593, // [Timer] Timer
+                            "message": "STOP_AND_RESET"
+                        },
+                        {
+                            "senderId": 10000000,
+                            "state": "SCAN_DONE",
+                            "targetId": 1638654, // [Timer] Timer
+                            "message": "RESET_AND_START"
                         }
                     ]
                 },
