@@ -662,14 +662,7 @@
                         393349
                     ]
                 },
-                "Ruined Fountain": {
-                    "deleteIds": [
-                        524426,
-                        524432,
-                        524435,
-                        524294
-                    ]
-                },
+                "Ruined Fountain": {},
                 "Ruined Shrine": {
                     "deleteIds": [
                         590136,
@@ -882,13 +875,7 @@
                         2097260
                     ]
                 },
-                "Totem Access": {
-                    "deleteIds": [
-                        2162710,
-                        2162717,
-                        2162724
-                    ]
-                },
+                "Totem Access": {},
                 "Sun Tower Access": {
                     "deleteIds": [
                         2293817,
@@ -1079,11 +1066,7 @@
                         2883679
                     ]
                 },
-                "Dynamo": {
-                    "deleteIds": [
-                        2949138
-                    ]
-                },
+                "Dynamo": {},
                 "Burn Dome": {
                     "timers": [
                         {
