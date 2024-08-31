@@ -662,7 +662,26 @@
                         393349
                     ]
                 },
-                "Ruined Fountain": {},
+                "Ruined Fountain": {
+                    "editObjs": {
+                        "524426": {
+                            "health": 0.1,
+                            "damage": 0
+                        },
+                        "524432": {
+                            "health": 0.1,
+                            "damage": 0
+                        },
+                        "524435": {
+                            "health": 0.1,
+                            "damage": 0
+                        },
+                        "524294": {
+                            "health": 0.1,
+                            "damage": 0
+                        }
+                    }
+                },
                 "Ruined Shrine": {
                     "deleteIds": [
                         590136,
@@ -875,7 +894,22 @@
                         2097260
                     ]
                 },
-                "Totem Access": {},
+                "Totem Access": {
+                    "editObjs": {
+                        "2162710": {
+                            "health": 0.1,
+                            "damage": 0
+                        },
+                        "2162717": {
+                            "health": 0.1,
+                            "damage": 0
+                        },
+                        "2162724": {
+                            "health": 0.1,
+                            "damage": 0
+                        }
+                    }
+                },
                 "Sun Tower Access": {
                     "deleteIds": [
                         2293817,
@@ -1066,7 +1100,14 @@
                         2883679
                     ]
                 },
-                "Dynamo": {},
+                "Dynamo": {
+                    "editObjs": {
+                        "2949138": {
+                            "health": 0.1,
+                            "damage": 0
+                        }
+                    }
+                },
                 "Burn Dome": {
                     "timers": [
                         {
