@@ -1,15 +1,15 @@
 {
     "$schema": "https://randovania.github.io/randomprime/randomprime.schema.json",
-    "outputIso": "Metroid Prime Museum v1.4.iso",
+    "outputIso": "Metroid Prime Museum v1.5.iso",
     "forceVanillaLayout": true,
     "gameConfig": {
         "gameBanner": {
-            "gameName": "Metroid Prime Museum v1.4",
-            "gameNameFull": "Metroid Prime Museum v1.4",
+            "gameName": "Metroid Prime Museum v1.5",
+            "gameNameFull": "Metroid Prime Museum v1.5",
             "description": "romhack by toasterparty"
         },
-        "mainMenuMessage": "Metroid Prime Museum v1.4",
-        "resultsString": "Metroid Prime Museum v1.4",
+        "mainMenuMessage": "Metroid Prime Museum v1.5",
+        "resultsString": "Metroid Prime Museum v1.5",
         "heatDamagePerSec": 0.0000001,
         "phazonDamagePerSec": 0.0000001,
         "poisonDamagePerSec": 0.0000001,
