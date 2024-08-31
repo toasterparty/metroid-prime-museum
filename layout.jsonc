@@ -702,6 +702,21 @@
                     "layers": {
                         "1": false
                     },
+                    "timers": [
+                        {
+                            "id": 10000019,
+                            "time": 0.1,
+                            "startImmediately": true
+                        }
+                    ],
+                    "addConnections": [
+                        {
+                            "senderId": 10000019,
+                            "state": "ZERO",
+                            "targetId": 786756, // start break cine relay
+                            "message": "SET_TO_ZERO"
+                        }
+                    ],
                     "deleteIds": [
                         786822,
                         786846,
@@ -709,7 +724,9 @@
                         787008,
                         787055,
                         786880,
-                        786878
+                        786878,
+                        786743,
+                        786744
                     ]
                 },
                 "Arboretum Access": {
